@@ -2,3 +2,7 @@
 
 root * /app
 php_server
+
+route {
+    rewrite / /home1.php
+}
