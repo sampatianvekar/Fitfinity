@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background-color:seashell;
+}
+
+header {
+  background-color: black;
+  padding: 20px;
+ text-align:center;
+}
+
+.logo {
+  color:white;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.buttons a {
+  border: 2px solid black;
+  padding: 1em 2.2em;
+  border-radius: 3em;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+.buttons a:active, a:hover {
+  background-color: palevioletred;
+  color: #ffffff;
+}
+
+
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+#img p{
+text-align:center;
+font-size:30px;
+padding:30px;
+
+}
+
+.buttons a {
+  border: 2px solid black;
+  padding: 1em 2.2em;
+  border-radius: 3em;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+}
+.buttons a:active, a:hover {
+  background-color: palevioletred;
+  color: #ffffff;
+}
+#products {
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1.5em;
+  padding: 2em 0;
+}
+
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+  height: 15em;
+}
+
+
+@media screen and (max-width: 720px) {
+ 
+  #products {
+    grid-template-columns: auto auto;
+    grid-column-gap: 1em;
+  }
+}
+
+
+/*Flip card*/
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <!-- Logo and navigation -->
+
+    <div class="logo"
+    >
+      <!-- Add your logo image or text here -->
+     <h1>Fitfinity</h1>
+    </div>
+
+    <div class="buttons">
+    <nav>
+
+      <ul>
+        <li><a href="home1.php" style="color: white;" >Home</a></li>
+        <li><a href="kids.html" style="color: white;">Kid's Health</a></li>
+         <li><a href="f.html" style="background-color: palevioletred;
+  color: #ffffff;">Specialized Diets</a></li>
+         <li><a href="bmi.html" style="color: white;">BMI</a></li>
+    
+      
+      </ul>
+    </nav>
+    <div>
+  </header>
+<div id="google_translate_element" style="height: 0px;"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+   <div class="wrapper">
+<div id="img"> 
+<p><b>Healthy Eating</b><br>
+<i>Discover the foods that fuel you so you can feel your best every day.</i></p>
+</div>
+      
+      
+      <div class="buttons">
+        <a href="f.html"  style="background-color:pink;">All</a>
+        <a href="Nonveg.html" >Non-Veg</a>
+        <a href="Veg.html">Veg</a>
+        <a href="Vegan.html"> Vegan</a>
+      
+      </div>
+
+
+<div id="products">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="nv1.jpg" alt="Avatar" style="width:300px;height:250px;">
+      <h3>Fiber rich lunch with lot of veggies</h3>
+    </div>
+    <div class="flip-card-back">
+    
+      <p>Star Ingredients: beetroot, egg, broad beans , spinach</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  790g</li>
+     <li>Carbs : 81g </li>
+     <li>Fat : 17.4g</li>
+    <li>Protein : 28.5g</li></p>
+     <p>On plate :
+     <ul>
+      <li>Broad beans poriyal ( avaraikai) </li>
+     <li>Beetroot Thoran </li>
+     <li>Spinach dal curry</li>
+    <li>Boiled eggs</li></p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="nv2.jpg" alt="Avatar" style="width:300px;height:250px;">
+       <h4>Protein packed lunch</h4>
+    </div>
+    <div class="flip-card-back">
+      <p>Star ingredients: Croaker fish, prawn, horsegram</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  690g</li>
+     <li>Carbs : 78g </li>
+     <li>Fat : 19.4g</li>
+    <li>Protein : 53.4g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Prawn fry Kerala style </li>
+     <li>Croaker fish fry</li>
+    <li>Horsegram gravy</li></ul></p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="nv3.jpg" alt="Avatar" style="width:300px;height:250px;">
+      <h4>Balanced lunch with lot of veggies and meat</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: chicken, carrot, egg</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  790g</li>
+     <li>Carbs : 81g </li>
+     <li>Fat : 17.4g</li>
+    <li>Protein : 28.5g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Broad beans poriyal ( avaraikai) </li>
+     <li>Chettinad chicken curry</li>
+     <li>Brinjal sambar</li>
+    <li>Carrot beans poriyal</li></ul></p>
+    </div>
+  </div>
+</div>
+
+
+<div class="flip-card">
+    <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="nv4.jpg" alt="Avatar" style="width:300px;height:250px;">
+      <h4>Fish curry plate with protein</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Indian mackerel, potato, moringa</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  780g</li>
+     <li>Carbs : 71.4g </li>
+     <li>Fat : 20.3g</li>
+    <li>Protein : 22.4g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Indian mackerel fish curry </li>
+     <li>Moringa rice</li>
+    <li>Potato fry</li></ul></p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="veg1.jpg" alt="Avatar" style="width:300px;height:250px;">
+    <h4>Fushion food with lot of carbs</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Broccoli, cauliflower, soya chunks</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  843g</li>
+     <li>Carbs : 90g </li>
+     <li>Fat : 19g</li>
+    <li>Protein : 16g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Broccoli stir fry </li>
+     <li>Cauliflower soya chunks curry</li>
+    <li>veg pasta</li></ul></p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+         <img src="veg2.jpg" alt="Avatar" style="width:300px;height:250px;">
+    <h4>Simple lunch with basic veggies</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Spinach, chana , kiwi</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  647g</li>
+     <li>Carbs : 71.4g </li>
+     <li>Fat : 14.5g</li>
+    <li>Protein : 19g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Chana masala </li>
+     <li>Spinach stir fry</li>
+     <li>Curd</li>
+    <li>Kiwi</li></ul></p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+          <img src="veg3.jpg" alt="Avatar" style="width:300px;height:250px;">
+    <h4>Colorful lunch with yummy salad</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Pineapple, purple cabbage , curd</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  723g</li>
+     <li>Carbs : 81g </li>
+     <li>Fat : 14.5g</li>
+    <li>Protein : 12g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Pineapple salad</li>
+     <li>Okra curd curry</li>
+     <li>Tomato rasam</li>
+     <li>Urad dal fritters</li>
+    <li>Purple cabbage stir fry</li></ul></p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="veg4.jpg" alt="Avatar" style="width:300px;height:250px;">
+    <h4>Simple lunch</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Cabbage, Black chana , Pudina(mint)</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  720g</li>
+     <li>Carbs : 79.4g </li>
+     <li>Fat : 15g</li>
+    <li>Protein : 15g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Black chana gravy </li>
+     <li>Cabbage stir fry</li>
+     <li>Curd</li>
+    <li>Mint coriander chutney</li></ul></p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="vn1.jpg" alt="Avatar" style="width:300px;height:250px;">
+    <h4>Perfect vegan lunch</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Tindora, ridge gourd, strawberry</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  690g</li>
+     <li>Carbs : 79g </li>
+     <li>Fat : 15.6g</li>
+    <li>Protein : 18g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Ridge gourd and dal curry </li>
+     <li>Ridge gourd skin chutney</li>
+     <li>Tindora stir fry</li>
+    <li>Strawberry</li></ul></p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="vn2.jpg" alt="Avatar" style="width:300px;height:250px;">
+    <h4>Meal with lot of veggies</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Toor dal, carrot, beans,pineapple, raw mango</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  788g</li>
+     <li>Carbs : 86g </li>
+     <li>Fat : 17.5g</li>
+    <li>Protein : 14.5g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Raw mango sambar </li>
+     <li>Carrot beans poriyal</li>
+     <li>Tomato rice</li>
+     <li>Pineapple salad</li>
+    <li>Strawberry</li></ul></p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="vn3.jpg" alt="Avatar" style="width:300px;height:250px;">
+    <h4>Packed vegan meal</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Agathi Keerai, spinach, yellow pumpkin, chow chow</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  671g</li>
+     <li>Carbs : 77.4g </li>
+     <li>Fat : 12.5g</li>
+    <li>Protein : 22.4g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Agathi stir fry</li>
+     <li>Spinach gravy</li>
+     <li>Yellow pumpkin stir fry</li>
+    <li>Tamarind rasam</li></ul></p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="vn4.jpg" alt="Avatar" style="width:300px;height:250px;">
+    <h4>Protein loaded vegan lunch</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Carrot, beans, banana stem, soya chunks, cucumber</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  622g</li>
+     <li>Carbs : 23.4g </li>
+     <li>Fat : 12.3g</li>
+    <li>Protein : 74.3g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Carrot beans stir fry</li>
+     <li>Banana stir fry</li>
+     <li>Soya gravy</li>
+    <li>Cucumber</li></ul></p>
+    </div>
+  </div>
+</div>
+
+
+</div></div>
+
+
+ <footer>
+    <!-- Footer content -->
+    <p>&copy; 2023 Fitfinity. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

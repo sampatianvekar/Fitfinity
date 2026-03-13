@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background-color:seashell;
+}
+
+header {
+  background-color: black;
+  padding: 20px;
+ text-align:center;
+}
+
+.logo {
+  color:white;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+#img p{
+text-align:center;
+font-size:30px;
+padding:30px;
+
+}
+
+
+.buttons a {
+  border: 2px solid black;
+  padding: 1em 2.2em;
+  border-radius: 3em;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+}
+.buttons a:active , a:hover {
+  background-color: palevioletred;
+  color: black;
+}
+#products {
+  display: grid;
+  grid-template-columns: auto auto auto auto; 
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1.5em;
+  padding: 2em 0;
+}
+
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+  height: 15em;
+}
+
+
+@media screen and (max-width: 720px) {
+ 
+  #products {
+    grid-template-columns: auto auto;
+    grid-column-gap: 1em;
+  }
+}
+
+
+/*Flip card*/
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.content {
+
+   background-color: palevioletred;
+    color: white;
+   margin:20px;
+    padding: 0px;
+}
+
+.content h1,h2{
+    text-align: center;
+}
+
+.content p {
+  
+  color:white;
+  font-size: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+
+ margin: 20px;
+
+  line-height: 1.8;
+
+  padding-inline: 60px;
+}
+
+.content ul li {
+ 
+  color:white;
+  font-size: 20px;
+  /*margin-bottom: 40px;*/
+ 
+
+  line-height: 1.8;
+  padding: 5px;
+
+  padding-inline: 30px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <!-- Logo and navigation -->
+    <div class="logo">
+      <!-- Add your logo image or text here -->
+     <h1>Fitfinity</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="dietindex.html">Home</a></li>
+        <li><a href="kids.html">Kid's Health</a></li>
+         <li><a href="f.html" style="color:pink">Specialized Diets</a></li>
+        <li><a href="bmi.html">BMI</a></li>
+    
+      
+      </ul>
+    </nav>
+  </header>
+
+  <div id="google_translate_element"></div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+   <div class="wrapper">
+<div id="img"> 
+<p><b>Healthy Eating</b><br>
+<i>Discover the foods that fuel you so you can feel your best every day.</i></p>
+</div>
+      
+      
+      <div class="buttons">
+        <a href="f.html" >All</a>
+        <a href="Nonveg.html">Non-Veg</a>
+        <a href="Veg.html"  style="background-color:Pink;">Veg</a>
+        <a href="Vegan.html" > Vegan</a>
+      
+      </div>
+
+
+<div id="products">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="veg1.jpg" alt="Avatar" style="width:300px;height:250px;">
+    <h4>Fushion food with lot of carbs</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Broccoli, cauliflower, soya chunks</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  843g</li>
+     <li>Carbs : 90g </li>
+     <li>Fat : 19g</li>
+    <li>Protein : 16g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Broccoli stir fry </li>
+     <li>Cauliflower soya chunks curry</li>
+    <li>veg pasta</li></ul></p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+         <img src="veg2.jpg" alt="Avatar" style="width:300px;height:250px;">
+    <h4>Simple lunch with basic veggies</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Spinach, chana , kiwi</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  647g</li>
+     <li>Carbs : 71.4g </li>
+     <li>Fat : 14.5g</li>
+    <li>Protein : 19g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Chana masala </li>
+     <li>Spinach stir fry</li>
+     <li>Curd</li>
+    <li>Kiwi</li></ul></p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+          <img src="veg3.jpg" alt="Avatar" style="width:300px;height:250px;">
+    <h4>Colorful lunch with yummy salad</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Pineapple, purple cabbage , curd</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  723g</li>
+     <li>Carbs : 81g </li>
+     <li>Fat : 14.5g</li>
+    <li>Protein : 12g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Pineapple salad</li>
+     <li>Okra curd curry</li>
+     <li>Tomato rasam</li>
+     <li>Urad dal fritters</li>
+    <li>Purple cabbage stir fry</li></ul></p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="veg4.jpg" alt="Avatar" style="width:300px;height:250px;">
+    <h4>Simple lunch</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Cabbage, Black chana , Pudina(mint)</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  720g</li>
+     <li>Carbs : 79.4g </li>
+     <li>Fat : 15g</li>
+    <li>Protein : 15g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Black chana gravy </li>
+     <li>Cabbage stir fry</li>
+     <li>Curd</li>
+    <li>Mint coriander chutney</li></ul></p>
+    </div>
+  </div>
+</div>
+
+</div></div>
+
+ <div class="content">
+<h1>The Vegetarian Diet</h1>
+<p>The vegetarian diet involves abstaining from eating meat, fish, and poultry.</p>
+<h1>Health benefits</h1>
+<p>Vegetarian diets are associated with a number of health benefits.<br>
+
+In fact, studies show that vegetarians tend to have better diet quality than meat-eaters and a higher intake of important nutrients like fiber, vitamin C, vitamin E, and magnesium .
+
+<br><br>A vegetarian diet may provide several other health boosts as well.</p>
+
+<h1>Foods to eat</h1>
+
+<p>A vegetarian diet should include a diverse mix of fruits, vegetables, grains, healthy fats, and proteins.<br>
+
+To replace the protein provided by meat in your diet, include a variety of protein-rich plant foods like whole grains, legumes, tempeh, tofu, and seitan.
+
+<br>If you follow a lacto-ovo-vegetarian diet, eggs and dairy can also boost your protein intake.<br>
+
+<br>Eating nutrient-dense whole foods like fruits, vegetables, and whole grains will supply a range of important vitamins and minerals to fill in any nutritional gaps in your diet.
+
+<br>A few healthy foods to eat on a vegetarian diet are:
+<ul>
+<li>Fruits: apples, bananas, berries, oranges, melons, pears, peaches
+<li>Vegetables: leafy greens, asparagus, broccoli, tomatoes, carrots
+<li>Grains: quinoa, barley, buckwheat, rice, oats</li>
+<li>Legumes: lentils, beans, peas, chickpeas</li>
+<li>Nuts: almonds, walnuts, cashews, chestnuts</li>
+<li>Seeds: flaxseed, chia, and hemp seeds</li>
+<li>Healthy fats: olive oil, avocados</li>
+<li>Proteins: tempeh, tofu, seitan, natto, nutritional yeast, spirulina, eggs, dairy products</li>
+</ul>
+
+</p>
+
+
+</div>
+</div>
+
+ <footer>
+    <!-- Footer content -->
+    <p>&copy; 2023 Fitfinity. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background-color:seashell;
+}
+
+header {
+  background-color: black;
+  padding: 20px;
+ text-align:center;
+}
+
+.logo {
+  color:white;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+
+#img p{
+text-align:center;
+font-size:30px;
+padding:30px;
+
+}
+
+
+.buttons a {
+  border: 2px solid black;
+  padding: 1em 2.2em;
+  border-radius: 3em;
+  background-color: transparent;
+  color: black;
+  cursor: pointer;
+}
+.buttons a:active, a:hover {
+  background-color: palevioletred;
+  color: #ffffff;
+}
+#products {
+  display: grid;
+  grid-template-columns: auto auto auto auto; 
+  grid-column-gap: 1.5em;
+  grid-row-gap: 1.5em;
+  padding: 2em 0;
+}
+
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+  height: 15em;
+}
+
+
+@media screen and (max-width: 720px) {
+ 
+  #products {
+    grid-template-columns: auto auto;
+    grid-column-gap: 1em;
+  }
+}
+
+
+/*Flip card*/
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.content {
+
+   background-color: palevioletred;
+    color: white;
+   margin:20px;
+    padding: 0px;
+}
+
+.content h1{
+    text-align: center;
+}
+
+.content p {
+  
+  color:white;
+  font-size: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+
+ margin-bottom: 20px;
+
+  line-height: 1.8;
+
+  padding-inline: 60px;
+}
+
+.content ul li {
+ 
+  color:white;
+  font-size: 20px;
+  /*margin-bottom: 40px;*/
+ 
+
+  line-height: 1.8;
+  padding: 5px;
+
+  padding-inline: 30px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <!-- Logo and navigation -->
+    <div class="logo">
+      <!-- Add your logo image or text here -->
+     <h1>Fitfinity</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="dietindex.html">Home</a></li>
+        <li><a href="kids.html">Kid's Health</a></li>
+         <li><a href="f.html" style="color:pink">Specialized Diets</a></li>
+        <li><a href="bmi.html">BMI</a></li>
+    
+      
+      </ul>
+    </nav>
+  </header>
+
+  <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+   <div class="wrapper">
+<div id="img"> 
+<p><b>Healthy Eating</b><br>
+<i>Discover the foods that fuel you so you can feel your best every day.</i></p>
+</div>
+      
+      
+      <div class="buttons">
+        <a href="f.html" >All</a>
+        <a href="Nonveg.html" >Non-Veg</a>
+        <a href="Veg.html">Veg</a>
+        <a href="Vegan.html" style="background-color:pink;"> Vegan</a>
+      
+      </div>
+
+
+<div id="products">
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="vn1.jpg" alt="Avatar" style="width:300px;height:250px;">
+    <h4>Perfect vegan lunch</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Tindora, ridge gourd, strawberry</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  690g</li>
+     <li>Carbs : 79g </li>
+     <li>Fat : 15.6g</li>
+    <li>Protein : 18g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Ridge gourd and dal curry </li>
+     <li>Ridge gourd skin chutney</li>
+     <li>Tindora stir fry</li>
+    <li>Strawberry</li></ul></p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="vn2.jpg" alt="Avatar" style="width:300px;height:250px;">
+    <h4>Meal with lot of veggies</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Toor dal, carrot, beans,pineapple, raw mango</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  788g</li>
+     <li>Carbs : 86g </li>
+     <li>Fat : 17.5g</li>
+    <li>Protein : 14.5g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Raw mango sambar </li>
+     <li>Carrot beans poriyal</li>
+     <li>Tomato rice</li>
+     <li>Pineapple salad</li>
+    <li>Strawberry</li></ul></p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="vn3.jpg" alt="Avatar" style="width:300px;height:250px;">
+    <h4>Packed vegan meal</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Agathi Keerai, spinach, yellow pumpkin, chow chow</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  671g</li>
+     <li>Carbs : 77.4g </li>
+     <li>Fat : 12.5g</li>
+    <li>Protein : 22.4g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Agathi stir fry</li>
+     <li>Spinach gravy</li>
+     <li>Yellow pumpkin stir fry</li>
+    <li>Tamarind rasam</li></ul></p>
+    </div>
+  </div>
+</div>
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="vn4.jpg" alt="Avatar" style="width:300px;height:250px;">
+    <h4>Protein loaded vegan lunch</h4>
+    </div>
+    <div class="flip-card-back">
+           <p>Star ingredients: Carrot, beans, banana stem, soya chunks, cucumber</p> 
+      <p>Macros : 
+      <ul>
+      <li>Calories :  622g</li>
+     <li>Carbs : 23.4g </li>
+     <li>Fat : 12.3g</li>
+    <li>Protein : 74.3g</li></ul></p>
+     <p>On plate :
+     <ul>
+      <li>Carrot beans stir fry</li>
+     <li>Banana stir fry</li>
+     <li>Soya gravy</li>
+    <li>Cucumber</li></ul></p>
+    </div>
+  </div>
+</div>
+
+
+</div></div>
+
+ <div class="content">
+<h1>The vegan diet</h1>
+<p>A vegan diet is based on plants (such as vegetables, grains, nuts and fruits) and foods made from plants.<br><br>
+
+Vegans do not eat foods that come from animals, including dairy products and eggs.<br>
+
+Healthy eating as a vegan,
+you can get the nutrients you need from eating a varied and balanced vegan diet including fortified foods and supplements. 
+<br>
+<br>
+<h2>For a healthy vegan diet:</h2><br>
+<ul>
+<li>Eat at least 5 portions of a variety of fruit and vegetables every day
+<li>Base meals on potatoes, bread, rice, pasta or other starchy carbohydrates (choose wholegrain where possible)
+<li>Have some fortified dairy alternatives, such as soya drinks and yoghurts (choose lower-fat and lower-sugar options)
+<li>Eat some beans, pulses and other proteins
+<li>Eat nuts and seeds rich in omega-3 fatty acids (such as walnuts) every day
+<li>Choose unsaturated oils and spreads, and eat in small amounts
+<li>Have fortified foods or supplements containing nutrients that are more difficult to get through a vegan diet, including vitamin D, vitamin B12, iodine, selenium, calcium and iron
+<li>Drink plenty of fluids (the government recommends 6 to 8 cups or glasses a day) 
+</p>
+</div>
+</div>
+
+ <footer>
+    <!-- Footer content -->
+    <p>&copy; 2023 Fitfinity. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title  -->
+    <title> - Fitfinity&amp; About Us</title>
+
+    
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="stylemake.css">
+
+<style>
+/*Cards*/
+div.container {
+  text-align: center;
+}
+
+.fullclick{
+    display: inline-block;
+  text-align: left;
+}
+.fullclick li {
+ text-align:right;
+box-shadow: 0 3px 10px 0 green;
+ 
+  list-style: none;
+  margin: 3em 0;
+  padding: 80px 20px;
+ height: 450px;
+ width:1200px;
+ background:color:#2b2b2b;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+
+
+.fullclick a.main {
+  color: #85baff;
+  text-align: right;
+  display: block;
+  z-index: 1;
+}
+.fullclick li a.main::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: ' ';
+}
+</style>
+
+
+
+
+   <script>
+var subjectObject = {
+  "Kids": {
+    "Pediatrician": ["Chetan Children's Clinic", "Khasbag children clinic", "Venugram Hospital"],
+    "Developmental-Pediatrics": ["Springboard child health center (Dr.Vinayak Koparde)", "Mom's Belief Vishwa Special Education Center & Hearing Clinic","Venugram Hospital (Dr. Priyadarashini Kulkarni)"]   
+  },
+  "Adults": {
+    "Cardiologist": ["Dr. M. Handral Mallikarjun", "Dr. Sanjay Porwal", "Dr. Prasad M R"],
+    "Neurologist": ["Dr. Aditya Kulkarni", "Dr. Ravi A Ichalakaranji", "Dr. Kutub Makandar"],
+    "Orthopedist": ["Dr. Prashant B Bastawadi","Dr. Jagadish Surannavar","Dr. Shettar"]
+  }
+}
+window.onload = function() {
+  var categorySel = document.getElementById("category");
+  var specSel = document.getElementById("speciality");
+  var docnameSel = document.getElementById("docname");
+  for (var x in subjectObject) {
+    categorySel.options[categorySel.options.length] = new Option(x, x);
+  }
+  categorySel.onchange = function() {
+    //empty Chapters- and Topics- dropdowns
+    docnameSel.length = 1;
+    specSel.length = 1;
+    //display correct values
+    for (var y in subjectObject[this.value]) {
+      specSel.options[specSel.options.length] = new Option(y, y);
+    }
+  }
+  specSel.onchange = function() {
+    //empty Chapters dropdown
+    docnameSel.length = 1;
+    //display correct values
+    var z = subjectObject[categorySel.value][this.value];
+    for (var i = 0; i < z.length; i++) {
+      docnameSel.options[docnameSel.options.length] = new Option(z[i], z[i]);
+    }
+  }
+}
+</script>
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    
+ <!-- ***** Header Area Start ***** -->
+    <header class="header-area">
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 h-100">
+                        <div class="h-100 d-md-flex justify-content-between align-items-center">
+
+       <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                            <p>Welcome to <span>Fitfinity-</span> Doctors support </p>
+                            <p>one destination to all your doctor needs </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header Area -->
+        <div class="main-header-area" id="stickyHeader">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 h-100">
+                        <div class="main-menu h-100">
+                            <nav class="navbar h-100 navbar-expand-lg">
+                                <!-- Logo Area  -->
+                                <a class="navbar-brand" href="index.html"><img src="img/core-img/logo.jpeg" alt="Logo"></a>
+
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medilifeMenu" aria-controls="medilifeMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+
+                                <div class="collapse navbar-collapse" id="medilifeMenu">
+                                    <!-- Menu Area -->
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item active">
+                                            <a class="nav-link" href="home1.php">Home <span class="sr-only">(current)</span></a>
+                                        </li>
+                                        
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="about-us.html">About Us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="services.html">Services</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="blog.html">News</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="contact.html">Contact</a>
+                                        </li>
+                                       <li class="nav-item">
+                                            <a class="nav-link" href="medical.html">Find your Doctors</a>
+                                        </li>
+                                    </ul>
+                                    <!-- Appointment Button -->
+                                    <a href="logout.php" class="btn medilife-appoint-btn ml-30"> <span>logout</span></a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<a href="medical.html"><center>BACK TO CATEGORIES</center></a>
+
+<div class="container">
+<ul class="fullclick">
+  <li style="background-image: url('cardiologist1.jpg');">
+    <h2>Cardiology</h2>
+    <p>
+      Cardiology is the study of the heart. Cardiology is a branch of<br>
+      medicine that deals with disorders of the heart and the cardiovascular<br>
+     system.Treatment of congenital heart defects, coronary artery disease, <br>
+     heart failure, valvular heart disease, and electrophysiology.
+    </p>
+    <a href="cardiology.html" class="main">Find your Cardiologist</a>
+  
+  </li>
+
+
+  <li style="background-image: url('neurology1.jpg');">
+    <h2>Neurology</h2>
+    <p>
+     Neurology is the branch of medicine concerned with the study <br>
+     and treatment of disorders of the nervous system. A doctor who<br>
+     specializes in neurology is called a neurologist. <br>
+     The neurologist treats disorders that affect the brain,<br> spinal cord, and nerves
+   </p>
+    <a href="neuro.html" class="main">Find your Neurologist</a>
+   
+  </li>
+  
+
+  <li style="background-image: url('orthopedist1.jpg');">
+    <h2>Orthopedic </h2>
+    <p>
+      Medical specialty concerned with the preservation and restoration<br>
+       of function of the skeletal system and its associated structures,<br>
+        i.e., spinal and other bones, joints, and muscles.
+    </p>
+    <a href="ortho.html" class="main">Find your Orthopedist</a>
+  
+  </li>
+</ul>
+  
+</div>
+<br>
+<br>
+<br>
+<br>
+<br><br><br>
+
+        <!-- ***** Book An Appoinment Area Start ***** -->
+    <div class="medilife-book-an-appoinment-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="appointment-form-content">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-12 col-lg-9">
+                                <div class="medilife-appointment-form">
+                                    <form action="appoint.php" method="post" id="appoint">
+                                        <div class="row align-items-end">
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <select class="form-control"  name="category" id="category">
+    <option value="" selected="selected">Select Category</option>
+  </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <select class="form-control" name="speciality" id="speciality">
+    <option value="" selected="selected">Please select category first</option>
+  </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                   <select class="form-control" name="docname" id="docname">
+    <option value="" selected="selected">Please select speciality first</option>
+  </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-md-2">
+                                                <div class="form-group">
+                                                    <label for="date" style="color:white;">Date:</label>
+                                                    <input type="date" class="form-control" name="date" id="date" placeholder="Date">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-2">
+                                                <div class="form-group">
+                                                    <label for="time" style="color:white;">Select a time:</label>
+                                                    <input type="time" class="form-control" name="time" id="time" placeholder="Time">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="name" id="name" placeholder="Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <input type="phone" class="form-control border-top-0 border-right-0 border-left-0" name="phone" id="number" placeholder="Phone">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0" name="email" id="email" placeholder="E-mail">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-7">
+                                                <div class="form-group mb-0">
+                                                    <textarea name="message" class="form-control mb-0 border-top-0 border-right-0 border-left-0" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-5 mb-0">
+                                                <div class="form-group mb-0">
+                                                    <button type="submit" class="btn medilife-btn">Make an Appointment <span>+</span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-3">
+                                <div class="medilife-contact-info">
+                                    <!-- Single Contact Info -->
+                                    <div class="single-contact-info mb-30">
+                                        <img src="img/icons/alarm-clock.png" alt="">
+                                        <p>KNOW YOUR DOCTORS<br><a href="medical.html" style="color : white;">Way to Doctors</a></p>
+                                    </div>
+                                    <!-- Single Contact Info >
+                                    <div class="single-contact-info mb-30">
+                                        <img src="img/icons/envelope.png" alt="">
+                                        <p>1234567890 <br>Fitfinity@GMAIL.com</p>
+                                    </div-->
+                                   
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- ***** Book An Appoinment Area End ***** -->
+    <!-- ***** Book An Appoinment Area End ***** -->
+
+    <!-- ***** Video Area Start ***** -->
+    
+    <!-- ***** Video Area End ***** -->
+
+    <!-- ***** Skilss Area Start ***** -->
+    
+    <!-- ***** Skills Area End ***** -->
+
+    
+   <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area section-padding-100">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="footer-logo">
+                                <img src="img/core-img/logo.png" alt="">
+                            </div>
+                            <p>description</p>
+                            <div class="footer-social-info">
+                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>Latest News</h6>
+                            </div>
+                            <div class="widget-blog-post">
+                                <!-- Single Blog Post -->
+                                <div class="widget-single-blog-post d-flex">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="img/blog-img/ln1.jpg" alt="">
+                                    </div>
+                                    <div class="widget-post-content">
+                                        <a href="#">Better Health Care</a>
+                                        <p>date</p>
+                                    </div>
+                                </div>
+                                <!-- Single Blog Post -->
+                                <div class="widget-single-blog-post d-flex">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="img/blog-img/ln2.jpg" alt="">
+                                    </div>
+                                    <div class="widget-post-content">
+                                        <a href="#">A new drug is tested</a>
+                                        <p>date</p>
+                                    </div>
+                                </div>
+                                <!-- Single Blog Post -->
+                                <div class="widget-single-blog-post d-flex">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="img/blog-img/ln3.jpg" alt="">
+                                    </div>
+                                    <div class="widget-post-content">
+                                        <a href="#">Health department advice</a>
+                                        <p>date</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>Contact Form</h6>
+                            </div>
+                            <div class="footer-contact-form">
+                                <form action="#" method="post">
+                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="footer-name" id="footer-name" placeholder="Name">
+                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0" name="footer-email" id="footer-email" placeholder="Email">
+                                    <textarea name="message" class="form-control border-top-0 border-right-0 border-left-0" id="footerMessage" placeholder="Message"></textarea>
+                                    <button type="submit" class="btn medilife-btn">Contact Us <span>+</span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title">
+                                <h6>News Letter</h6>
+                            </div>
+
+                            <div class="footer-newsletter-area">
+                                <form action="#">
+                                    <input type="email" class="form-control border-0 mb-0" name="newsletterEmail" id="newsletterEmail" placeholder="Your Email Here">
+                                    <button type="submit">Subscribe</button>
+                                </form>
+                                <p>description</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Footer Area -->
+        <div class="bottom-footer-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="bottom-footer-content">
+                            <!-- Copywrite Text -->
+                            <div class="copywrite-text">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                       </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+
+
+</body>
+
+</html>

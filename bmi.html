@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <title>Diet</title>
+
+    <!-- Stylesheet -->
+   <style>
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: white;
+ 
+}
+
+/* Header styles */
+header {
+    background-color: black;
+  padding: 20px;
+ text-align:center;
+   position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+.logo {
+  color:white;
+  
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+  color: blue;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.buttons a {
+  border: 2px solid black;
+  padding: 1em 2.2em;
+  border-radius: 3em;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+.buttons a:active, a:hover {
+  background-color: palevioletred;
+  color: #ffffff;
+}
+
+.container1 {
+text-align:center;
+padding: 40px;
+margin:20px;
+background-image: linear-gradient(0deg, #cfe2ff 50%, rgb(255 199 182) 100%);
+line-height:2em;
+font-family: Helvetica;
+}
+
+
+.container{
+background-color:floralwhite;
+padding:40px;
+margin: 20px;
+}
+
+
+
+.container p{
+
+ font-size: 18px;
+  /*margin-bottom: 40px;*/
+ margin-bottom: 20px;
+
+  line-height: 1.8;
+ padding: 40px;
+ margin: 20px;
+  padding-inline: 60px;
+}
+
+.container2 img{
+float:left;
+}
+
+
+
+.container2 p {
+ font-size: 18px;
+
+
+ margin-bottom: 20px;
+ line-height: 1.5;
+
+  padding-inline: 60px;
+}
+
+.container3{
+  padding: 40px;
+  margin: 20px;
+   background-color:floralwhite;
+}
+.container3 p{
+
+ font-size: 18px;
+  /*margin-bottom: 40px;*/
+ margin-bottom: 20px;
+ background-color:floralwhite;
+  line-height: 1.8;
+padding: 20px;
+  padding-inline: 60px;
+}
+
+/*child calc*/
+
+
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+</style>
+
+<script>
+
+window.onload = () => {
+	let button = document.querySelector("#btn");
+
+	// Function for calculating BMI
+	button.addEventListener("click", calculateBMI);
+};
+
+function calculateBMI() {
+
+	/* Getting input from user into height variable.
+	Input is string so typecasting is necessary. */
+	let height = parseInt(document
+			.querySelector("#height").value);
+
+	/* Getting input from user into weight variable.
+	Input is string so typecasting is necessary.*/
+	let weight = parseInt(document
+			.querySelector("#weight").value);
+
+	let result = document.querySelector("#result");
+
+	// Checking the user providing a proper
+	// value or not
+	if (height === "" || isNaN(height))
+		result.innerHTML = "Provide a valid Height!";
+
+	else if (weight === "" || isNaN(weight))
+		result.innerHTML = "Provide a valid Weight!";
+
+  else if (weight <='0' || isNaN(weight))
+    result.innerHTML = "Provide a valid Weight!";
+  
+   else if (height <='0' || isNaN(height))
+    result.innerHTML = "Provide a valid Height!";
+
+  else if (height <= 0 && weight <= 0)
+    result.innerHTML = "Provide a valid Height and Weight!";
+  
+	else {
+
+		// Fixing upto 2 decimal places
+		let bmi = (weight / ((height * height)
+							/ 10000)).toFixed(2);
+
+		// Dividing as per the bmi conditions
+		if (bmi < 18.6) result.innerHTML =
+			`Under Weight : <span>${bmi}</span>`;
+
+		else if (bmi >= 18.6 && bmi < 24.9)
+			result.innerHTML =
+				`Normal : <span>${bmi}</span>`;
+
+		else result.innerHTML =
+			`Over Weight : <span>${bmi}</span>`;
+	}
+}
+</script>
+
+
+</head>
+<body >
+<header>
+    <!-- Logo and navigation -->
+    <div class="logo">
+      <!-- Add your logo image or text here -->
+     <h1>Fitfinity</h1>
+    </div>
+    <div class="buttons">
+    <nav>
+      <ul>
+        <li><a href="home1.php"  >Home</a></li>
+        <li><a href="kids.html" >Kid's Health</a></li>
+         <li><a href="f.html">Specialized Diets</a></li>
+         <li><a href="bmi.html" style="background-color: palevioletred;
+  color: #ffffff;">BMI</a></li>
+    
+      </ul>
+    </nav>
+    </div>
+  </header>
+
+<br><br><br><br><br><br><br><br>
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<div class="container1">
+        <h1 style="background-color:whitesmoke">BMI Calculator</h1>
+ <h3>Know your Body Mass Index (BMI)</h3>
+        <!-- Option for providing height 
+            and weight to the user-->
+        <p>Height (in cm)</p>
+
+        <input type="text" id="height">
+
+        <p>Weight (in kg)</p>
+
+        <input type="text" id="weight">
+
+        <button id="btn">Calculate</button>
+
+        <div id="result"></div>
+    </div>
+ 
+<div class="container">
+<h1>Body Mass Index  (BMI) </h1>
+<p>    Body mass index, or BMI, is a measure of body size. It combines a person's weight with their height. The results of a BMI measurement can give an idea about whether a person has the correct weight for their height.
+<br>
+<br>
+BMI is a screening tool that can indicate whether a person is underweight or if they have a healthy weight, excess weight, or obesity. If a person's BMI is outside of the healthy range, their health risks may increase significantly.
+<br>
+Carrying too much weight can lead toTrusted Source a variety of health conditions, such as type 2 diabetes, high blood pressure, and cardiovascular problems.
+<br>
+A weigh that is too low can increase the risk of malnutrition, osteoporosis, and anemia. The doctor will make suitable recommendations.
+<br>
+BMI does not measure body fat directly, and it does not account for age, sex, ethnicity, or muscle mass in adults.
+<br>
+However, it uses standard weight status categories that can help doctors to track weight status across populations and identify potential issues in individuals.
+</p>
+</div>
+<div class="container2">
+<img src="BMI.jpg">
+<h4>BMI of less than 18.5</h4>
+<p>A BMI of less than 18.5 indicates that you are underweight, so you may need to put on some weight. You are recommended to ask your doctor or a dietitian for advice.
+</p>
+<h4>BMI of 18.5-24.9</h4>
+<p>A BMI of 18.5-24.9 indicates that you are at a healthy weight for your height. By maintaining a healthy weight, you lower your risk of developing serious health problems.
+</p>
+<h4>BMI of 25-29.9</h4>
+<p>A BMI of 25-29.9 indicates that you are slightly overweight. You may be advised to lose some weight for health reasons. You are recommended to talk to your doctor or a dietitian for advice.
+</p>
+<h4>BMI of over 30</h4>
+<p>A BMI of over 30 indicates that you are heavily overweight. Your health may be at risk if you do not lose weight. You are recommended to talk to your doctor or a dietitian for advice.</p>
+</p></div>
+
+<div class="container3">
+<h1>BMI in Child and Teens</h1>
+<p>In adults, BMI values are not linked to age and are the same for both genders.
+
+However, measuring BMI in children and teens is slightly different. Girls and boys develop at different rates and have different amounts of body fat at different ages.<br><br> For this reason, BMI measurements during childhood and adolescence take age and gender into consideration.
+
+Doctors and other health professionals do not categorize children by healthy weight ranges because:<br>
+
+  -They change with each month of age<br>
+  -Male and female body types change at different rates<br>
+  -They change as the child grows taller<br>
+<br>
+
+Doctors calculate BMI for children and teens in the same way as they do for adults, by measuring height and weight. Then they locate the BMI number and person's age on a gender-specific BMI-for-age chart. This will indicate whether the child is within a healthy range.</p>
+
+<h1><a href="kids.html">Find your child's BMI</a></h1>
+</div>
+
+
+
+
+  <footer>
+    <!-- Footer content -->
+    <p>&copy; 2023 Fitfinity. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

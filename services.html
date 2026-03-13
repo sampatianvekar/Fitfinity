@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Fitfinity- Health Services</title>
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .service-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            height: 100%;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.13);
+            border-color: #1d9e75;
+        }
+        .service-card .service-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 18px;
+            display: block;
+            border: 4px solid #e1f5ee;
+        }
+        .service-card h5 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .service-card p {
+            font-size: 14px;
+            color: #777;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .btn-service {
+            display: inline-block;
+            padding: 10px 24px;
+            background: #1d9e75;
+            color: #fff !important;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none !important;
+            transition: background 0.3s;
+        }
+        .btn-service:hover {
+            background: #0f6e56;
+        }
+        .services-section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .services-section-title h2 {
+            font-size: 34px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+        .services-section-title p {
+            font-size: 15px;
+            color: #888;
+            max-width: 580px;
+            margin: 0 auto;
+        }
+        .services-section-title .divider {
+            width: 55px;
+            height: 3px;
+            background: #1d9e75;
+            margin: 12px auto 15px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="medilife-load"></div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area">
+        <div class="top-header-area">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 h-100">
+                        <div class="h-100 d-md-flex justify-content-between align-items-center">
+                            <div id="google_translate_element"></div>
+                            <script type="text/javascript">
+                            function googleTranslateElementInit() {
+                                new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                            }
+                            </script>
+                            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                            <p>Welcome to <span>Fitfinity</span> Services</p>
+                            <p>Opening Hours : Monday to Saturday - 8am to 10pm Contact : <span>1234567890</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header-area" id="stickyHeader">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12 h-100">
+                        <div class="main-menu h-100">
+                            <nav class="navbar h-100 navbar-expand-lg">
+                                <a class="navbar-brand" href="home1.php"><img src="img/core-img/logo.jpeg" alt="Logo"></a>
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#medilifeMenu" aria-controls="medilifeMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                                <div class="collapse navbar-collapse" id="medilifeMenu">
+                                    <ul class="navbar-nav ml-auto">
+                                        <li class="nav-item"><a class="nav-link" href="home1.php">Home</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+                                        <li class="nav-item active"><a class="nav-link" href="services.html">Services</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="blog.html">News</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="medical.html">Find your Doctors</a></li>
+                                    </ul>
+                                    <a href="logout.php" class="btn medilife-appoint-btn ml-30"><span>Logout</span></a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Breadcumb Area Start ***** -->
+    <section class="breadcumb-area bg-img gradient-background-overlay" style="background-image: url(img/bg-img/breadcumb2.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div class="breadcumb-content">
+                        <h3 class="breadcumb-title">Our Services</h3>
+                        <p>Everything you need for a healthier life — all in one place</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Breadcumb Area End ***** -->
+
+    <!-- ***** Services Cards Area Start ***** -->
+    <div class="medilife-services-area section-padding-100-20">
+        <div class="container">
+
+            <div class="services-section-title">
+                <h2>What We Offer</h2>
+                <div class="divider"></div>
+                <p>Explore our wide range of health and wellness services designed to keep you and your family fit and happy.</p>
+            </div>
+
+            <div class="row">
+
+                <!-- ASMR -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=160&h=160&fit=crop" alt="ASMR" class="service-img">
+                        <h5>🎧 ASMR Therapy</h5>
+                        <p>Experience the calming effects of Autonomous Sensory Meridian Response. Reduce stress, anxiety and improve your sleep quality with curated ASMR content.</p>
+                        <a href="asmr2.html" class="btn-service">Explore ASMR →</a>
+                    </div>
+                </div>
+
+                <!-- Diet -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=160&h=160&fit=crop" alt="Diet" class="service-img">
+                        <h5>🥗 Indian Diet Plans</h5>
+                        <p>Discover a variety of affordable and nutritious Indian diet plans tailored to your body's needs. Everything your body needs, nothing it doesn't.</p>
+                        <a href="dietindex.html" class="btn-service">View Diet Plans →</a>
+                    </div>
+                </div>
+
+                <!-- Fitness -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=160&h=160&fit=crop" alt="Fitness" class="service-img">
+                        <h5>💪 Fitness & Exercise</h5>
+                        <p>Find the best exercises suited to your body type and fitness goals. From beginner to advanced, we have routines for everyone to stay active.</p>
+                        <a href="fitness.html" class="btn-service">Start Fitness →</a>
+                    </div>
+                </div>
+
+                <!-- Appointment -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=160&h=160&fit=crop" alt="Appointment" class="service-img">
+                        <h5>📅 Book Appointment</h5>
+                        <p>Schedule a consultation with our trusted doctors easily and quickly. Choose your preferred doctor, date and time — all online with just a few clicks.</p>
+                        <a href="makeap.html" class="btn-service">Book Now →</a>
+                    </div>
+                </div>
+
+                <!-- Parenting -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=160&h=160&fit=crop" alt="Parenting" class="service-img">
+                        <h5>👨‍👩‍👧 Mindful Parenting</h5>
+                        <p>Get expert parenting tips and advice. Learn how to raise happy, healthy children while maintaining your own well-being at every stage.</p>
+                        <a href="index1.html" class="btn-service">Parenting Tips →</a>
+                    </div>
+                </div>
+
+                <!-- Find Doctors -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="service-card">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=160&h=160&fit=crop" alt="Doctors" class="service-img">
+                        <h5>👨‍⚕️ Find Top Doctors</h5>
+                        <p>Find the top 3 specialists in Belagavi across various medical fields. Get their location, contact details and book an appointment instantly.</p>
+                        <a href="medical.html" class="btn-service">Find Doctors →</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ***** Services Cards Area End ***** -->
+
+    <!-- ***** Why Choose Us Area Start ***** -->
+    <div class="medilife-services-area clearfix">
+        <div class="singleServiceArea equalize d-flex">
+            <div class="singleServiceIcon">
+                <i class="icon-hospital-4"></i>
+            </div>
+            <div class="singleServiceText">
+                <h2>A new way of running things</h2>
+                <p>We bring modern healthcare solutions to your fingertips — from booking appointments to accessing wellness resources, all in one place.</p>
+            </div>
+        </div>
+        <div class="singleServiceArea equalize bg-img" style="background-image: url(img/bg-img/about1.jpg);"></div>
+        <div class="singleServiceArea equalize d-flex">
+            <div class="singleServiceIcon">
+                <i class="icon-clinic-history-2"></i>
+            </div>
+            <div class="singleServiceText">
+                <h2>All equipment is high tech</h2>
+                <p>Our partner clinics use the latest medical equipment and technologies to ensure accurate diagnosis and the best possible patient outcomes.</p>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Why Choose Us Area End ***** -->
+
+    <!-- ***** Benefits Area Start ***** -->
+    <section class="medilife-benefits-area section-padding-100-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        <h2>We always put <br>our patients first</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-12 col-md-4">
+                    <div class="single-benefits-area mb-50 text-right">
+                        <div class="single-benefits-title d-flex align-items-end row-reverse">
+                            <i class="icon-teeth"></i>
+                        </div>
+                        <h5>Safe &amp; Trusted</h5>
+                        <p>All our doctors are verified and certified specialists you can trust.</p>
+                    </div>
+                    <div class="single-benefits-area mb-50 text-right">
+                        <div class="single-benefits-title d-flex align-items-end row-reverse">
+                            <i class="icon-hospital-bed-1"></i>
+                        </div>
+                        <h5>Online Results</h5>
+                        <p>Access your health records and test results anytime, anywhere.</p>
+                    </div>
+                    <div class="single-benefits-area mb-50 text-right">
+                        <div class="single-benefits-title d-flex align-items-end row-reverse">
+                            <i class="icon-hospital-2"></i>
+                        </div>
+                        <h5>Modern Facilities</h5>
+                        <p>State-of-the-art clinics equipped with the latest medical technology.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="single-benefits-thumb">
+                        <img src="img/bg-img/benefits.png" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="single-benefits-area mb-50">
+                        <div class="single-benefits-title d-flex align-items-end">
+                            <i class="icon-flask-1"></i>
+                        </div>
+                        <h5>Lab Services</h5>
+                        <p>Quick and accurate lab tests with results delivered digitally.</p>
+                    </div>
+                    <div class="single-benefits-area mb-50">
+                        <div class="single-benefits-title d-flex align-items-end">
+                            <i class="icon-smartphone-1"></i>
+                        </div>
+                        <h5>Mobile Friendly</h5>
+                        <p>Access all services from your smartphone, anytime you need.</p>
+                    </div>
+                    <div class="single-benefits-area mb-50">
+                        <div class="single-benefits-title d-flex align-items-end">
+                            <i class="icon-nuclear"></i>
+                        </div>
+                        <h5>Advanced Imaging</h5>
+                        <p>MRI, CT scans and X-rays available at our partner centers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Benefits Area End ***** -->
+
+    <!-- ***** CTA Area Start ***** -->
+    <div class="medilife-cta-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="cta-content">
+                        <i class="icon-smartphone"></i>
+                        <h2>For Emergency calls</h2>
+                        <h3>108 Ambulance</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** CTA Area End ***** -->
+
+    <!-- ***** Footer Area Start ***** -->
+    <footer class="footer-area section-padding-100">
+        <div class="main-footer-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="footer-logo">
+                                <img src="img/core-img/logo.jpeg" alt="Fitfinity Logo">
+                            </div>
+                            <p style="margin-top: 15px;">Fitfinity is your one-stop destination for trusted doctors, healthy diets, fitness tips, and mindful parenting — all in one place.</p>
+                            <div class="footer-social-info" style="margin-top: 15px;">
+                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title"><h6>Latest Health News</h6></div>
+                            <div class="widget-blog-post">
+                                <div class="widget-single-blog-post d-flex" style="margin-bottom: 15px;">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=80&h=80&fit=crop" alt="Weight Loss" style="width:60px; height:60px; object-fit:cover; border-radius:6px;">
+                                    </div>
+                                    <div class="widget-post-content" style="padding-left: 10px;">
+                                        <a href="https://www.scientificamerican.com/article/7-important-health-stories-well-be-following-in-2026/" target="_blank">GLP-1 Weight Loss Pills: A New Era</a>
+                                        <p style="font-size:12px; margin:3px 0 0;">Mar 2026</p>
+                                    </div>
+                                </div>
+                                <div class="widget-single-blog-post d-flex" style="margin-bottom: 15px;">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=80&h=80&fit=crop" alt="Mental Health" style="width:60px; height:60px; object-fit:cover; border-radius:6px;">
+                                    </div>
+                                    <div class="widget-post-content" style="padding-left: 10px;">
+                                        <a href="https://www.projecthope.org/news-stories/story/6-health-issues-were-watching-in-2026/" target="_blank">Mental Health Crisis: 1 Billion Affected</a>
+                                        <p style="font-size:12px; margin:3px 0 0;">Jan 2026</p>
+                                    </div>
+                                </div>
+                                <div class="widget-single-blog-post d-flex" style="margin-bottom: 15px;">
+                                    <div class="widget-post-thumbnail">
+                                        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=80&h=80&fit=crop" alt="Sleep Apnea" style="width:60px; height:60px; object-fit:cover; border-radius:6px;">
+                                    </div>
+                                    <div class="widget-post-content" style="padding-left: 10px;">
+                                        <a href="https://www.sciencedaily.com/releases/2026/03/260311004816.htm" target="_blank">New Pill May Treat Sleep Apnea</a>
+                                        <p style="font-size:12px; margin:3px 0 0;">Mar 11, 2026</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title"><h6>Contact Form</h6></div>
+                            <div class="footer-contact-form">
+                                <form method="post" action="send-email.php">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="name" placeholder="Your name" id="name">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control border-top-0 border-right-0 border-left-0" name="email" placeholder="Your email" id="email">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" class="form-control border-top-0 border-right-0 border-left-0" name="subject" placeholder="Subject" id="subject">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" class="form-control border-top-0 border-right-0 border-left-0" placeholder="Your message" id="message"></textarea>
+                                    <button class="btn medilife-btn" style="margin-top: 10px;">Send <span>+</span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area">
+                            <div class="widget-title"><h6>Newsletter</h6></div>
+                            <div class="footer-newsletter-area">
+                                <p style="margin-bottom: 12px;">Subscribe to get the latest health tips and news directly in your inbox.</p>
+                                <form action="#">
+                                    <input type="email" class="form-control border-0 mb-0" name="newsletterEmail" id="newsletterEmail" placeholder="Your Email Here">
+                                    <button type="submit" style="margin-top: 10px;">Subscribe</button>
+                                </form>
+                            </div>
+                            <div class="widget-title" style="margin-top: 25px;"><h6>Quick Links</h6></div>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="margin-bottom: 8px;"><a href="home1.php">🏠 Home</a></li>
+                                <li style="margin-bottom: 8px;"><a href="about-us.html">ℹ️ About Us</a></li>
+                                <li style="margin-bottom: 8px;"><a href="services.html">⚕️ Services</a></li>
+                                <li style="margin-bottom: 8px;"><a href="medical.html">👨‍⚕️ Find Doctors</a></li>
+                                <li style="margin-bottom: 8px;"><a href="contact.html">📞 Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-footer-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="bottom-footer-content">
+                            <div class="copywrite-text">
+                                <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by
+                                    <a href="https://www.instagram.com/_aakanksha_rajput_/" target="_blank">Aakanksha Rajput</a> &amp;
+                                    <a href="https://www.instagram.com/sampati_anvekar/" target="_blank">Sampati Anvekar</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** Footer Area End ***** -->
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="js/active.js"></script>
+
+</body>
+</html>

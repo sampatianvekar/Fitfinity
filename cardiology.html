@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <title>Cardiologists</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Stylesheet -->
+   <style>
+body, html {
+  height: 100%;
+  margin: 0;
+  //background-image:url(cardiobg.png);
+}
+
+/* Header styles */
+header {
+  background-color: white;
+  padding: 20px;
+ text-align:center;
+}
+
+.logo {
+  color: black;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+
+  color: black;
+}
+
+.bg{
+background-image:url(cardiobg.png);
+background-size:100px 100px;
+
+  /* Full height */
+  height: 50%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 390px;
+  
+    background-color: #b4c5e4;
+    padding: 50px;
+   font-size:18px;
+    color:white;
+}
+
+
+
+/*Container*/
+.content {
+
+   background-color: white;
+    flex: 1;
+    padding: 20px;
+}
+
+.doctor-card{
+  max-width:700px;
+  background: white;
+  border-radius: 2px;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 3px 10px 0 steelblue;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  position:relative;
+  
+  .info{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 112px auto;
+    
+    .avatar{
+      overflow: hidden;
+      height:200px;
+      width:200px;
+      border-radius:1px;
+      margin-top:5px;
+    }
+    
+    .details{
+       text-align:center;
+      padding:10px 0;
+      
+      .name{
+        font-size:18px;
+        line-height:1;
+        padding:2px 0;
+        font-weight:400
+      }
+      
+      .meta-info{
+        text-align:center;
+        padding:10px 0;
+        color: #787878;
+        line-height: 16px;
+        font-weight:400;
+        
+        .prac-area,
+        .exp-yr{
+          
+          &:not(:empty){
+            &::before{
+              content: "|";
+              padding: 10px
+            }
+          }
+          
+        }
+      }
+    }
+    
+    @media(max-width:575px){
+      grid-template-columns: 1fr;
+      justify-items:center;
+      
+      .details{
+        text-align:center;
+        
+        .meta-info{
+          padding:5px;
+          
+          .exp-yr{
+            display:block;
+            
+            &:not(:empty){
+              margin-top:5px;
+              &::before{
+                content: none
+              }
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  
+  .actions{
+    margin: 0 15px 15px;
+    display: table;
+    width:calc(100% - 30px); 
+    border-collapse: collapse;
+    border-radius: 3px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #f6f7f8;
+    
+    > div{
+      text-align:center;
+      padding:0;
+      display:table-cell;
+      border:1px solid #f2f2f2;
+      vertical-align:middle;
+      height: 64px;
+    }
+    
+.ratings{
+      width:24%;
+      .rating-control{
+        display:block;
+}
+
+    .checked {
+  color: orange;
+
+}
+    .comments{
+      width:23%;
+      .comment-count{
+        strong{
+          display:block;
+          color: $blue-color;
+          font-size:18px;
+          font-weight:400;
+          line-height: 20px;
+        }
+        
+        font-size: 12px;
+        text-transform:uppercase;
+        color:#898989
+      }
+    }
+    .consultation{
+      width:23%;
+      
+      .fee{
+        
+        strong{
+          display:block;
+          color: $blue-color;
+          font-size:18px;
+          font-weight:400;
+          line-height: 20px;
+        }
+        
+        font-size: 12px;
+        text-transform:uppercase;
+        color:#898989
+      }
+    }
+    .appo{
+      width:30%;
+      
+      .btn{
+        background: blue;
+        display:block;
+        text-decoration:none;
+        color: #fff;
+        text-transform: uppercase;
+        padding:15px;
+        margin:0 5px;
+      }
+    }
+    
+    @media(max-width:575px){
+      > div{
+        display:block;
+        padding:10px;
+        height:auto;
+        
+        &.comments,
+        &.consultation{
+          width:50%;
+          display:inline-block;
+        }
+        
+        &.ratings,
+        &.appo{
+          width:100%
+        }
+      }
+    }
+  }
+  
+  .locations{
+    padding: 15px 15px 20px;
+    // background: #fafafa;
+    border-top:1px solid #f6f7f8;
+    border-radius: 0 0 2px 2px;
+    line-height:1;
+    font-size:12px;
+    color: #898989;
+    font-weight:400;
+    text-transform:capitalize;
+    
+    @media(max-width:575px){
+      text-align:center
+    }
+  }
+  }
+  
+  &.certified::after{
+    content: '';
+    background: url('//via.placeholder.com/100') no-repeat;
+    background-size:contain;
+    height:30px;
+    width:30px;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    border-radius:50%
+  }
+  
+  @media(max-width:575px){
+    padding:10px
+  }
+  
+  & + & {
+    margin-top: 1rem;
+  }
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+</style>
+
+</head>
+ <body>
+
+<header>
+    <!-- Logo and navigation -->
+    <div class="logo">
+      <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      <!-- Add your logo image or text here -->
+     <h1>Fitfinity</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="Categories1.html">Back to Speciality</a></li>
+        <li><a href="cardiology.html"  style="color:pink">Cardiologist</a></li>
+        
+    
+      
+      </ul>
+    </nav>
+  </header>
+
+<div class="bg">
+</div>
+
+<div class="container">
+<div class="sidebar">
+
+<h2 style="color: black;">Find more best doctors nearby to your location</h2> 
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15351.647620238817!2d74.51378634178495!3d15.861226781608801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbest%20cardiologist%20in%20belgaum!5e0!3m2!1sen!2sin!4v1690299971163!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+        </div>
+
+
+<div id="what" class="content">
+
+<h1><Center>CARDIOLOGISTS</Center></h1>
+
+<div class="doctor-card">
+		<div class="info">
+			<div class="avatar">
+				<img src="male.jpg" alt="doc name">
+			</div>
+      <div class="details">
+          <div class="name">Dr. M. Handral Mallikarjun</div>
+          <div class="meta-info">
+            <span class="sp">Cardiologist</span>
+            <span class="prac-area"> Ashirwad Hospital</span>
+            <span class="exp-yr">30 years exp.</span>
+          </div>
+      </div>
+		</div>
+		<div class="actions">
+                                     <div class="ratings">
+			<span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                    </div>
+			<div class="comments">
+				<span class="comment-count"><strong>CALL </strong>093258 57829</span>
+			</div>
+			<div class="consultation">
+				<span class="fee"><strong>Ashirwad Hospital,2nd floor,Radio Complex,Shivaji Road,Near Hotel Anupam </strong>Belagavi,Karnataka</span>
+			</div>
+			<div class="appo">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61409.89961802624!2d74.46346916685057!3d15.850356108057566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf669f5095362f%3A0x9c21d826283a5442!2sDr.%20M.%20Handral%20Mallikarjun!5e0!3m2!1sen!2sin!4v1693797215720!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+		<div class="locations">
+ 
+  </div>
+	</div>
+
+<!--Doctor 3-->
+
+<div class="doctor-card">
+		<div class="info">
+			<div class="avatar">
+				<img src="cardiol2.jpg" alt="doc name">
+			</div>
+      <div class="details">
+          <div class="name">Dr. Sanjay Porwal </div>
+          <div class="meta-info">
+            <span class="sp">Cardiologist</span>
+            <span class="prac-area">Pavitram prabha no.94 </span>
+            <span class="exp-yr">30 years exp.</span>
+          </div>
+      </div>
+		</div>
+		<div class="actions">
+                                     <div class="ratings">
+			<span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star half "></span>
+                                    </div>
+			<div class="comments">
+				<span class="comment-count"><strong>CALL </strong>098450 10014</span>
+			</div>
+			<div class="consultation">
+				<span class="fee"><strong> Pavitram prabha no.94 old post office, road, Camp</strong>Belagavi,Karnataka</span>
+			</div>
+			<div class="appo">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.995676133151!2d74.50416737504878!3d15.85682458479226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf67816ef311bd%3A0x7c2ffd8097b63135!2sDr.%20Sanjay%20Porwal%20%7C%20Best%20Cardiologist%20near%20me%20Old%20Post%20Office%20Road%20Camp%20Belagavi!5e0!3m2!1sen!2sin!4v1693797265984!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+		<div class="locations">
+
+  </div>
+	</div>
+
+
+<!--Doctor 2-->
+
+<div class="doctor-card">
+		<div class="info">
+			<div class="avatar">
+				<img src="cardiol3.jpg" alt="doc name">
+			</div>
+      <div class="details">
+          <div class="name">Dr. Prasad M R  </div>
+          <div class="meta-info">
+            <span class="sp">Cardiologist</span>
+            <span class="prac-area">Yashoda Health Clinic</span>
+            <span class="exp-yr">30 years exp.</span>
+          </div>
+      </div>
+		</div>
+		<div class="actions">
+                                     <div class="ratings">
+			<span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star half "></span>
+                                    </div>
+			<div class="comments">
+				<span class="comment-count"><strong>CALL </strong>098450 10014</span>
+			</div>
+			<div class="consultation">
+				<span class="fee"><strong>Yashoda Health Clinic, Ayodhya Nagar, Sadashiv Nagar </strong>Belagavi,Karnataka</span>
+			</div>
+			<div class="appo">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.702185691246!2d74.51225957504917!3d15.872242384779131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf677773d2dee3%3A0x2fd590868e42240f!2sDr.%20Prasad%20M%20R%20%7C%20Best%20Cardiologist%20near%20me%20Ayodhya%20Nagar%20Belgaum!5e0!3m2!1sen!2sin!4v1693797331379!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+		<div class="locations">
+     
+  </div>
+	</div>
+
+ </div></div>
+  <footer>
+    <!-- Footer content -->
+    <p style="color:white;">&copy; 2023 Fitfinity. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

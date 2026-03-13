@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <title>Pediatrician</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Stylesheet -->
+   <style>
+body, html {
+  height: 100%;
+  margin: 0;
+  //background-image:url(cardiobg.png);
+}
+
+/* Header styles */
+header {
+  background-color: white;
+  padding: 20px;
+ text-align:center;
+}
+
+.logo {
+  color: black;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+
+  color: black;
+}
+
+.bg{
+background-image:url(pedia1.jpg);
+background-size:100px 100px;
+
+  /* Full height */
+  height: 50%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 390px;
+  
+    background-color: #b4c5e4;
+    padding: 50px;
+   font-size:18px;
+    color:white;
+}
+
+
+
+/*Container*/
+.content {
+
+   background-color: white;
+    flex: 1;
+    padding: 20px;
+}
+
+.doctor-card{
+  max-width:700px;
+  background: white;
+  border-radius: 2px;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 3px 10px 0 steelblue;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  position:relative;
+  
+  .info{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 112px auto;
+    
+    .avatar{
+      overflow: hidden;
+      height:200px;
+      width:200px;
+      border-radius:1px;
+      margin-top:5px;
+    }
+    
+    .details{
+       text-align:center;
+      padding:10px 0;
+      
+      .name{
+        font-size:18px;
+        line-height:1;
+        padding:2px 0;
+        font-weight:400
+      }
+      
+      .meta-info{
+        text-align:center;
+        padding:10px 0;
+        color: #787878;
+        line-height: 16px;
+        font-weight:400;
+        
+        .prac-area,
+        .exp-yr{
+          
+          &:not(:empty){
+            &::before{
+              content: "|";
+              padding: 10px
+            }
+          
+          }
+        }
+      }
+    }
+    
+    @media(max-width:575px){
+      grid-template-columns: 1fr;
+      justify-items:center;
+      
+      .details{
+        text-align:center;
+        
+        .meta-info{
+          padding:5px;
+          
+          .exp-yr{
+            display:block;
+            
+            &:not(:empty){
+              margin-top:5px;
+              &::before{
+                content: none
+              }
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  
+  .actions{
+    margin: 0 15px 15px;
+    display: table;
+    width:calc(100% - 30px); 
+    border-collapse: collapse;
+    border-radius: 3px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #f6f7f8;
+    
+    > div{
+      text-align:center;
+      padding:0;
+      display:table-cell;
+      border:1px solid #f2f2f2;
+      vertical-align:middle;
+      height: 64px;
+    }
+    
+.ratings{
+      width:24%;
+      .rating-control{
+        display:block;
+}
+
+    .checked {
+  color: orange;
+
+}
+    .comments{
+      width:23%;
+      .comment-count{
+        strong{
+          display:block;
+          color: $blue-color;
+          font-size:18px;
+          font-weight:400;
+          line-height: 20px;
+        }
+        
+        font-size: 12px;
+        text-transform:uppercase;
+        color:#898989
+      }
+    }
+    .consultation{
+      width:23%;
+      
+      .fee{
+        
+        strong{
+          display:block;
+          color: $blue-color;
+          font-size:18px;
+          font-weight:400;
+          line-height: 20px;
+        }
+        
+        font-size: 12px;
+        text-transform:uppercase;
+        color:#898989
+      }
+    }
+    .appo{
+      width:30%;
+      
+      .btn{
+        background: blue;
+        display:block;
+        text-decoration:none;
+        color: #fff;
+        text-transform: uppercase;
+        padding:15px;
+        margin:0 5px;
+      }
+    }
+    
+    @media(max-width:575px){
+      > div{
+        display:block;
+        padding:10px;
+        height:auto;
+        
+        &.comments,
+        &.consultation{
+          width:50%;
+          display:inline-block;
+        }
+        
+        &.ratings,
+        &.appo{
+          width:100%
+        }
+      }
+    }
+  }
+  
+  .locations{
+    padding: 15px 15px 20px;
+    // background: #fafafa;
+    border-top:1px solid #f6f7f8;
+    border-radius: 0 0 2px 2px;
+    line-height:1;
+    font-size:12px;
+    color: #898989;
+    font-weight:400;
+    text-transform:capitalize;
+    
+    @media(max-width:575px){
+      text-align:center
+    }
+  }
+  }
+  
+  &.certified::after{
+    content: '';
+    background: url('//via.placeholder.com/100') no-repeat;
+    background-size:contain;
+    height:30px;
+    width:30px;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    border-radius:50%
+  }
+  
+  @media(max-width:575px){
+    padding:10px
+  }
+  
+  & + & {
+    margin-top: 1rem;
+  }
+}
+  footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+
+</style>
+
+ <body>
+
+<header>
+    <!-- Logo and navigation -->
+    <div class="logo">
+
+       <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      <!-- Add your logo image or text here -->
+     <h1>Fitfinity</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="categories.html">Back to Speciality</a></li>
+        <li><a href="pedia.html"  style="color:pink"> Pediatrician</a></li>
+        
+    
+      
+      </ul>
+    </nav>
+  </header>
+
+<div class="bg">
+</div>
+
+<div class="container">
+<div class="sidebar">
+
+<h2 style="color: black;">Find more best doctors nearby to your location</h2> 
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15351.647620238817!2d74.51378634178495!3d15.861226781608801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbest%20cardiologist%20in%20belgaum!5e0!3m2!1sen!2sin!4v1690299971163!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<h2><a href="https://www.sutterhealth.org/health/childrens-health/top-parenting-tips">Top 5 Parenting Tips from Pediatricians</a>
+<br><br>
+  <a href="https://www.scholastic.com/parents/family-life/parent-child/6-things-pediatricians-want-you-to-know.html">6 Things Pediatricians Want Parents to Know</a></h2>
+        </div>
+
+
+<div id="what" class="content">
+
+<h1><Center>Pediatrician</Center></h1>
+
+<div class="doctor-card">
+		<div class="info">
+			<div class="avatar">
+				<img src="docpof.jpg" alt="doc name">
+			</div>
+      <div class="details">
+          <div class="name">Chetan Children's Clinic</div>
+          <div class="meta-info">
+            <span class="sp">Pediatrician</span>
+            <span class="prac-area"> Children policlinic</span>
+            <span class="exp-yr">7:30am - 8:00pm.</span>
+          </div>
+      </div>
+		</div>
+		<div class="actions">
+                                     <div class="ratings">
+			<span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                    </div>
+			<div class="comments">
+				<span class="comment-count"><strong>CALL </strong><a href="tel:089515 15223">089515 15223</a></span>
+			</div>
+			<div class="consultation">
+				<span class="fee"><strong> No. 4963, opposite Appolo Medicals, near Hanuman Nagar Circle, Hanuman Nagar </strong>Belagavi,Karnataka</span>
+			</div>
+			<div class="appo">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15350.149607905241!2d74.4969029!3d15.8808925!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf6390af777035%3A0x31df515deb82fc56!2sChetan%20Children%E2%80%99s%20Clinic!5e0!3m2!1sen!2sin!4v1692211994409!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+		<div class="locations">
+     
+  </div>
+	</div>
+
+<!--Doctor 3-->
+
+<div class="doctor-card">
+		<div class="info">
+			<div class="avatar">
+				<img src="docpof.jpg" alt="doc name">
+			</div>
+      <div class="details">
+          <div class="name">Khasbag children clinic</div>
+          <div class="meta-info">
+            <span class="sp">Pediatrician</span>
+            <span class="prac-area">Pediatric clinic </span>
+            <span class="exp-yr">5:00pm - 9:00pm</span>
+          </div>
+      </div>
+		</div>
+		<div class="actions">
+                                     <div class="ratings">
+			<span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star half "></span>
+                                    </div>
+			<div class="comments">
+				<span class="comment-count"><strong>CALL </strong><a href="tel:063645 22748">063645 22748</a></span>
+			</div>
+			<div class="consultation">
+				<span class="fee"><strong>children clinic, bus stop, Uppar Galli, Khasbag, Vadagoan</strong>Belagavi,Karnataka</span>
+			</div>
+			<div class="appo">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.289804886971!2d74.52190407504841!3d15.841358584805608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf675817bc6035%3A0x129606d270812351!2sKhasbag%20children%20clinic!5e0!3m2!1sen!2sin!4v1693796715595!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+		<div class="locations">
+      
+  </div>
+	</div>
+
+
+<!--Doctor 2-->
+
+<div class="doctor-card">
+		<div class="info">
+			<div class="avatar">
+				<img src="docpof.jpg" alt="doc name">
+			</div>
+      <div class="details">
+          <div class="name">Venugram Hospital (Dr. Priyadarashini Kulkarni)  </div>
+          <div class="meta-info">
+            <span class="sp">Pediatrician</span>
+            <span class="prac-area">Venugram Hospital</span>
+            <span class="exp-yr">Open 24 Hours</span>
+          </div>
+      </div>
+		</div>
+		<div class="actions">
+                                     <div class="ratings">
+			<span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star half "></span>
+                                    </div>
+			<div class="comments">
+				<span class="comment-count"><strong>CALL </strong><a href="tel:0831-2413335">0831-2413335</a></span>
+			</div>
+			<div class="consultation">
+				<span class="fee"><strong> CTS 785 II cross, opposite DMart, Near III, Hindu Nagar, Railway Gate</strong>Belagavi,Karnataka</span>
+			</div>
+			<div class="appo">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.586324041546!2d74.49485707504816!3d15.825751984819039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf65d517208a65%3A0xa880d7b2bdfcd42c!2sVenugram%20Hospital!5e0!3m2!1sen!2sin!4v1693796645297!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+		<div class="locations">
+     
+  </div>
+	</div>
+
+ </div></div>
+  <footer>
+    <!-- Footer content -->
+    <p style="color:white;">&copy; 2023 Fitfinity. All rights reserved.</p>
+  </footer>
+</body>
+</html>

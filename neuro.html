@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <title>Neurologists</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Stylesheet -->
+   <style>
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+/* Header styles */
+header {
+  background-color: white;
+  padding: 20px;
+ text-align:center;
+}
+
+.logo {
+  color:black;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.bg{
+background-image:url(neurobg.jpg);
+background-size:100px 100px;
+
+  /* Full height */
+  height: 50%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 390px;
+    background-color:  #b4c5e4;
+    padding: 50px;
+   font-size:18px;
+    color:white;
+}
+
+
+/*Container*/
+.content {
+
+   background-color: white;
+    flex: 1;
+    padding: 20px;
+}
+
+
+.doctor-card{
+  max-width:700px;
+  background: #fff;
+  border-radius: 2px;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 3px 10px 0 steelblue;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  position:relative;
+  
+  .info{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 112px auto;
+    
+    .avatar{
+      overflow: hidden;
+      height:200px;
+      width:200px;
+      border-radius:1px;
+      margin-top:5px;
+    }
+    
+    .details{
+      text-align:center;
+      padding:10px 0;
+      
+      .name{
+        font-size:18px;
+        line-height:1;
+        padding:2px 0;
+        font-weight:400
+      }
+      
+      .meta-info{
+         text-align:center;
+        padding:10px 0;
+        color: #787878;
+        line-height: 16px;
+        font-weight:400;
+        
+        .prac-area,
+        .exp-yr{
+          
+          &:not(:empty){
+            &::before{
+              content: "|";
+              padding: 10px
+            }
+          }
+          
+        }
+      }
+    }
+    
+    @media(max-width:575px){
+      grid-template-columns: 1fr;
+      justify-items:center;
+      
+      .details{
+        text-align:center;
+        
+        .meta-info{
+          padding:5px;
+          
+          .exp-yr{
+            display:block;
+            
+            &:not(:empty){
+              margin-top:5px;
+              &::before{
+                content: none
+              }
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  
+  .actions{
+    margin: 0 15px 15px;
+    display: table;
+    width:calc(100% - 30px); 
+    border-collapse: collapse;
+    border-radius: 3px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #f6f7f8;
+    
+    > div{
+      text-align:center;
+      padding:0;
+      display:table-cell;
+      border:1px solid #f2f2f2;
+      vertical-align:middle;
+      height: 64px;
+    }
+    
+.ratings{
+      width:24%;
+      .rating-control{
+        display:block;
+}
+
+    .checked {
+  color: orange;
+
+}
+    .comments{
+      width:23%;
+      .comment-count{
+        strong{
+          display:block;
+          color: $blue-color;
+          font-size:18px;
+          font-weight:400;
+          line-height: 20px;
+        }
+        
+        font-size: 12px;
+        text-transform:uppercase;
+        color:#898989
+      }
+    }
+    .consultation{
+      width:23%;
+      
+      .fee{
+        
+        strong{
+          display:block;
+          color: $blue-color;
+          font-size:18px;
+          font-weight:400;
+          line-height: 20px;
+        }
+        
+        font-size: 12px;
+        text-transform:uppercase;
+        color:#898989
+      }
+    }
+    .appo{
+      width:30%;
+      
+      .btn{
+        background: blue;
+        display:block;
+        text-decoration:none;
+        color: #fff;
+        text-transform: uppercase;
+        padding:15px;
+        margin:0 5px;
+      }
+    }
+    
+    @media(max-width:575px){
+      > div{
+        display:block;
+        padding:10px;
+        height:auto;
+        
+        &.comments,
+        &.consultation{
+          width:50%;
+          display:inline-block;
+        }
+        
+        &.ratings,
+        &.appo{
+          width:100%
+        }
+      }
+    }
+  }
+  
+  .locations{
+    padding: 15px 15px 20px;
+    // background: #fafafa;
+    border-top:1px solid #f6f7f8;
+    border-radius: 0 0 2px 2px;
+    line-height:1;
+    font-size:12px;
+    color: #898989;
+    font-weight:400;
+    text-transform:capitalize;
+    
+    @media(max-width:575px){
+      text-align:center
+    }
+  }
+  }
+  
+  &.certified::after{
+    content: '';
+    background: url('//via.placeholder.com/100') no-repeat;
+    background-size:contain;
+    height:30px;
+    width:30px;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    border-radius:50%
+  }
+  
+  @media(max-width:575px){
+    padding:10px
+  }
+  
+  & + & {
+    margin-top: 1rem;
+  }
+}
+  footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+</style>
+
+ <body>
+
+<header>
+    <!-- Logo and navigation -->
+    <div class="logo">
+       <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      <!-- Add your logo image or text here -->
+     <h1>Fitfinity</h1>
+    </div>
+    <nav>
+      <ul>
+            <li><a href="Categories1.html">Back to Speciality</a></li>
+        <li><a href="neuro.html"  style="color:pink">Neurologist</a></li>
+    
+      
+      </ul>
+    </nav>
+  </header>
+
+<div class="bg">
+</div>
+
+<div class="container">
+<div class="sidebar">
+
+<h2>Find more best doctors nearby to your location</h2> 
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d15351.647620238817!2d74.51378634178495!3d15.861226781608801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbest%20cardiologist%20in%20belgaum!5e0!3m2!1sen!2sin!4v1690299971163!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+<h2><a href="https://www.nebraskamed.com/neurological-care/tips-to-maintain-your-brain-health">6 tips to maintain your brain health</a><br><br>
+          <a href="https://premierneurologycenter.com/blog/what-to-expect-at-a-neurology-appointment/">What to Expect at a Neurology Appointment</a><br><br>
+            
+        </div>
+<div id="what" class="content">
+
+
+<h1><Center>NEUROLOGISTS</Center></h1>
+
+<div class="doctor-card">
+		<div class="info">
+			<div class="avatar">
+				<img src="male.jpg" alt="doc name">
+			</div>
+      <div class="details">
+          <div class="name">Dr Aditya Kulkarni</div>
+          <div class="meta-info">
+            <span class="sp">Neurologist</span>
+            <span class="prac-area"> Ganesh Polyclinic</span>
+            <span class="exp-yr">30 years exp.</span>
+          </div>
+      </div>
+		</div>
+		<div class="actions">
+                                     <div class="ratings">
+			<span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                    </div>
+			<div class="comments">
+				<span class="comment-count"><strong>CALL </strong><a href="tel:093258 57829">093258 57829</a></span>
+			</div>
+			<div class="consultation">
+				<span class="fee"><strong>Near Habba restaurant ,Kallehol,Club road </strong>Belagavi,Karnataka</span>
+			</div>
+			<div class="appo">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30701.61763627117!2d74.4942348593252!3d15.87224139539559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf675df37f3159%3A0x8c37918806f3260d!2sDr%20Aditya%20Kulkarni!5e0!3m2!1sen!2sin!4v1693797549633!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+			</div>
+		</div>
+		<div class="locations">
+    
+  </div>
+	</div>
+
+<!--Doctor 2-->
+
+<div class="doctor-card">
+		<div class="info">
+			<div class="avatar">
+				<img src="ravi.jpg" alt="doc name">
+			</div>
+      <div class="details">
+          <div class="name">Dr. Ravi A Ichalakaranji</div>
+          <div class="meta-info">
+            <span class="sp">Neurologist</span>
+            <span class="prac-area">  Neuron Brain Spine</span>
+            <span class="exp-yr">30 years exp.</span>
+          </div>
+      </div>
+		</div>
+		<div class="actions">
+                                     <div class="ratings">
+			<span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star half "></span>
+                                    </div>
+			<div class="comments">
+				<span class="comment-count"><strong>CALL </strong>098450 10014</span>
+			</div>
+			<div class="consultation">
+				<span class="fee"><strong>Classique Hts Building, Kolhapur Circle, opposite to Shiva Hotel, Ayodhya Nagar, Sadashiv Nagar </strong>Belagavi,Karnataka</span>
+			</div>
+			<div class="appo">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.6240025267703!2d74.51204557504919!3d15.876347084775546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf614f6e152c5f%3A0x3ac82139ca12d783!2sDr.%20Ravi%20A%20Ichalakaranji%20%7C%20Neuron%20Brain%20Spine!5e0!3m2!1sen!2sin!4v1693797590185!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+		<div class="locations">
+    
+  </div>
+	</div>
+
+ <!--Doctor 3-->
+
+<div class="doctor-card">
+		<div class="info">
+			<div class="avatar">
+				<img src="neuro1.jpg" alt="doc name">
+			</div>
+      <div class="details">
+          <div class="name">Dr Kutub Makandar </div>
+          <div class="meta-info">
+            <span class="sp">Neurologist</span>
+            <span class="prac-area"> Neuro Care Clinic</span>
+            <span class="exp-yr">30 years exp.</span>
+          </div>
+      </div>
+		</div>
+		<div class="actions">
+                                     <div class="ratings">
+			<span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star half "></span>
+                                    </div>
+			<div class="comments">
+				<span class="comment-count"><strong>CALL </strong>098450 10014</span>
+			</div>
+			<div class="consultation">
+				<span class="fee"><strong>7,Double Rd, Jadhav Nagar,Sadashiv Nagar </strong>Belagavi,Karnataka</span>
+			</div>
+			<div class="appo">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15350.59120772395!2d74.5006542!3d15.8750977!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf61556d3f5057%3A0x67c688f37c93774b!2sDr%20Kutub%20Makandar%20Neuro%20Care%20clinic!5e0!3m2!1sen!2sin!4v1687571734310!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+		<div class="locations">
+     
+  </div>
+	</div>
+
+</div></div>
+ <footer>
+    <!-- Footer content -->
+    <p style="color:white;">&copy; 2023 Fitfinity. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

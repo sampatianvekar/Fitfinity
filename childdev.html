@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   
+    <title>Developmental-behavioral pediatrics</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Stylesheet -->
+   <style>
+body, html {
+  height: 100%;
+  margin: 0;
+  //background-image:url(cardiobg.png);
+}
+
+/* Header styles */
+header {
+  background-color: white;
+  padding: 20px;
+ text-align:center;
+}
+
+.logo {
+  color: black;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+
+  color: black;
+}
+
+.bg{
+background-image:url(develp.jpg);
+background-size:100px 100px;
+
+  /* Full height */
+  height: 50%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 390px;
+  
+    background-color: #b4c5e4;
+    padding: 50px;
+   font-size:18px;
+    color:white;
+}
+
+
+
+/*Container*/
+.content {
+
+   background-color: white;
+    flex: 1;
+    padding: 20px;
+}
+
+.doctor-card{
+  max-width:700px;
+  background: white;
+  border-radius: 2px;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 3px 10px 0 steelblue;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  position:relative;
+  
+  .info{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 112px auto;
+    
+    .avatar{
+      overflow: hidden;
+      height:200px;
+      width:200px;
+      border-radius:1px;
+      margin-top:5px;
+    }
+    
+    .details{
+       text-align:center;
+      padding:10px 0;
+      
+      .name{
+        font-size:18px;
+        line-height:1;
+        padding:2px 0;
+        font-weight:400
+      }
+      
+      .meta-info{
+        text-align:center;
+        padding:10px 0;
+        color: #787878;
+        line-height: 16px;
+        font-weight:400;
+        
+        .prac-area,
+        .exp-yr{
+          
+          &:not(:empty){
+            &::before{
+              content: "|";
+              padding: 10px
+            }
+          
+          }
+        }
+      }
+    }
+    
+    @media(max-width:575px){
+      grid-template-columns: 1fr;
+      justify-items:center;
+      
+      .details{
+        text-align:center;
+        
+        .meta-info{
+          padding:5px;
+          
+          .exp-yr{
+            display:block;
+            
+            &:not(:empty){
+              margin-top:5px;
+              &::before{
+                content: none
+              }
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  
+  .actions{
+    margin: 0 15px 15px;
+    display: table;
+    width:calc(100% - 30px); 
+    border-collapse: collapse;
+    border-radius: 3px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #f6f7f8;
+    
+    > div{
+      text-align:center;
+      padding:0;
+      display:table-cell;
+      border:1px solid #f2f2f2;
+      vertical-align:middle;
+      height: 64px;
+    }
+    
+.ratings{
+      width:24%;
+      .rating-control{
+        display:block;
+}
+
+    .checked {
+  color: orange;
+
+}
+    .comments{
+      width:23%;
+      .comment-count{
+        strong{
+          display:block;
+          color: $blue-color;
+          font-size:18px;
+          font-weight:400;
+          line-height: 20px;
+        }
+        
+        font-size: 12px;
+        text-transform:uppercase;
+        color:#898989
+      }
+    }
+    .consultation{
+      width:23%;
+      
+      .fee{
+        
+        strong{
+          display:block;
+          color: $blue-color;
+          font-size:18px;
+          font-weight:400;
+          line-height: 20px;
+        }
+        
+        font-size: 12px;
+        text-transform:uppercase;
+        color:#898989
+      }
+    }
+    .appo{
+      width:30%;
+      
+      .btn{
+        background: blue;
+        display:block;
+        text-decoration:none;
+        color: #fff;
+        text-transform: uppercase;
+        padding:15px;
+        margin:0 5px;
+      }
+    }
+    
+    @media(max-width:575px){
+      > div{
+        display:block;
+        padding:10px;
+        height:auto;
+        
+        &.comments,
+        &.consultation{
+          width:50%;
+          display:inline-block;
+        }
+        
+        &.ratings,
+        &.appo{
+          width:100%
+        }
+      }
+    }
+  }
+  
+  .locations{
+    padding: 15px 15px 20px;
+    // background: #fafafa;
+    border-top:1px solid #f6f7f8;
+    border-radius: 0 0 2px 2px;
+    line-height:1;
+    font-size:12px;
+    color: #898989;
+    font-weight:400;
+    text-transform:capitalize;
+    
+    @media(max-width:575px){
+      text-align:center
+    }
+  }
+  }
+  
+  &.certified::after{
+    content: '';
+    background: url('//via.placeholder.com/100') no-repeat;
+    background-size:contain;
+    height:30px;
+    width:30px;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    border-radius:50%
+  }
+  
+  @media(max-width:575px){
+    padding:10px
+  }
+  
+  & + & {
+    margin-top: 1rem;
+  }
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+</style>
+
+ <body>
+
+<header>
+    <!-- Logo and navigation -->
+    <div class="logo">
+      <div id="google_translate_element"></div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      <!-- Add your logo image or text here -->
+     <h1>Ava</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="Categories.html">Back to Speciality</a></li>
+        <li><a href="childdev.html"  style="color:pink">Developmental-behavioral pediatrics</a></li>
+        
+    
+      
+      </ul>
+    </nav>
+  </header>
+
+
+
+<div class="bg">
+</div>
+
+<div class="container">
+<div class="sidebar">
+
+
+        </div>
+
+
+<div id="what" class="content">
+
+<h1><Center>Developmental-behavioral pediatrics</Center></h1>
+
+
+<div class="doctor-card">
+    <div class="info">
+      <div class="avatar">
+        <img src="docpof.jpg" alt="doc name">
+      </div>
+      <div class="details">
+          <div class="name">Springboard child health center<br>(Dr.Vinayak Koparde)</div>
+          <div class="meta-info">
+            <span class="sp">Child specialist</span>
+            <span class="prac-area"> Child Development and Guidance </span>
+            <span class="exp-yr"><br>1:00pm - 8:00pm(Sunday Closed)</span>
+          </div>
+      </div>
+    </div>
+    <div class="actions">
+                                     <div class="ratings">
+      <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star half "></span>
+                                    </div>
+      <div class="comments">
+        <span class="comment-count"><strong>CALL </strong><a href="tel:097418 18200">097418 18200</a></span>
+      </div>
+      <div class="consultation">
+        <span class="fee"><strong>Opposite Sardar ground, beside Acer mall, Sardar ground road, near Kaktives, Belagavi</strong>Belagavi,Karnataka</span>
+      </div>
+      <div class="appo">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491690.2030274607!2d73.83547148834305!3d15.680642354011205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf677be292e355%3A0xea7e00b48a13a359!2sSpringboard%20Child%20Health!5e0!3m2!1sen!2sin!4v1692868849940!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="locations">
+     
+  </div>
+  </div>
+
+<!--Doctor 3-->
+
+<div class="doctor-card">
+		<div class="info">
+			<div class="avatar">
+				<img src="docpof.jpg" alt="doc name">
+			</div>
+      <div class="details">
+          <div class="name">Mom's Belief Vishwa Special Education <br>Center & Hearing Clinic</div>
+          <div class="meta-info">
+            <span class="sp">Pediatrician</span>
+            <span class="prac-area">Pediatric clinic </span>
+            <span class="exp-yr">5:00pm - 9:00pm</span>
+          </div>
+      </div>
+		</div>
+		<div class="actions">
+                                     <div class="ratings">
+			<span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star half "></span>
+                                    </div>
+			<div class="comments">
+				<span class="comment-count"><strong>CALL </strong><a href="tel:093192 22100">093192 22100</a></span>
+			</div>
+			<div class="consultation">
+				<span class="fee"><strong>Radio Complex, Shop No F20, 1st floor, Raviwar Peth</strong>Belagavi,Karnataka</span>
+			</div>
+			<div class="appo">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122816.78686499136!2d74.3588282972656!3d15.855304900000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf679f96e30b3f%3A0x185107de1debbd49!2sMom&#39;s%20Belief%20Vishwa%20Special%20Education%20Center%20%26%20Hearing%20Clinic!5e0!3m2!1sen!2sin!4v1692869007226!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+		<div class="locations">
+      
+  </div>
+	</div>
+
+
+<!--Doctor 2-->
+
+<div class="doctor-card">
+		<div class="info">
+			<div class="avatar">
+				<img src="docpof.jpg" alt="doc name">
+			</div>
+      <div class="details">
+          <div class="name">Venugram Hospital (Dr. Priyadarashini Kulkarni)  </div>
+          <div class="meta-info">
+            <span class="sp">Pediatrician</span>
+            <span class="prac-area">Venugram Hospital</span>
+            <span class="exp-yr">Open 24 Hours</span>
+          </div>
+      </div>
+		</div>
+		<div class="actions">
+                                     <div class="ratings">
+			<span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star half "></span>
+                                    </div>
+			<div class="comments">
+				<span class="comment-count"><strong>CALL </strong><a href="tel:0831-2413335">0831-2413335</a></span>
+			</div>
+			<div class="consultation">
+				<span class="fee"><strong> CTS 785 II cross, opposite DMart, Near III, Hindu Nagar, Railway Gate</strong>Belagavi,Karnataka</span>
+			</div>
+			<div class="appo">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.586324041546!2d74.49485707504816!3d15.825751984819039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf65d517208a65%3A0xa880d7b2bdfcd42c!2sVenugram%20Hospital!5e0!3m2!1sen!2sin!4v1693796645297!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
+		</div>
+		<div class="locations">
+      
+  </div>
+	</div>
+
+ </div></div>
+   <footer>
+    <!-- Footer content -->
+    <p style="color:white;">&copy; 2023 Fitfinity. All rights reserved.</p>
+  </footer>
+</body>
+</html>
