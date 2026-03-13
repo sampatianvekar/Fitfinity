@@ -1,5 +1,5 @@
-:{$PORT}
-
-root * /app
-index home1.php
-php_server
+:{$PORT} {
+    root * /app
+    index home1.php
+    php_server
+}
