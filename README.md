@@ -61,13 +61,9 @@ http://localhost/Fitfinity/php-signup-login-main/home1.php
 
 ---
 
-## 📸 Screenshots
+## 📸 Live Demo
 
-> 🏠 Home Page — Hero carousel with health services overview
-
-> 👨‍⚕️ Find Doctors — Category-based specialist search for Kids & Adults
-
-> 📅 Appointment Booking — Smart dropdown with category → speciality → doctor flow
+https://fitfinity-production.up.railway.app/
 
 ---
 
