@@ -1,8 +1,5 @@
 :{$PORT}
 
 root * /app
+index home1.php
 php_server
-
-route {
-    rewrite / /home1.php
-}
