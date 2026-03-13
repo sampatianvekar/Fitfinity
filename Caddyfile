@@ -1,5 +1,5 @@
 :{$PORT}
 
-root * /app
+root * /app/php-signup-login-main
 index home1.php
 php_server
