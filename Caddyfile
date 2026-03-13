@@ -1,5 +1,5 @@
 :{$PORT} {
     root * /app
+    rewrite / /home1.php
     php_server
-    try_files {path} /home1.php
 }
